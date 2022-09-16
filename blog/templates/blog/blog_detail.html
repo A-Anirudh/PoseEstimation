@@ -1,0 +1,20 @@
+{% extends 'main/base.html' %} {% load static %} {% block content %}
+
+<div class="blogDetailContainer">
+  <div>
+    <h1 lass="blogTitle">{{ object.title }}</h1>
+    <p class="blogDate">{{ object.created }}</p>
+  </div>
+  <br />
+  <p class="blogContentDetail">{{ object.content|linebreaks}}</p>
+  <br />
+  {% if object.image %}
+  <img
+    style="width: 20vw; margin: auto"
+    src="{{ object.image.url }}"
+    alt="image"
+  />
+  {% else %} {% endif %}
+</div>
+
+{% endblock content %}

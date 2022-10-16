@@ -1,0 +1,22 @@
+{% extends 'main/base.html' %}{% load static %} {% block content %}
+
+<img class="center" src="{% static 'result_images/1.jpg' %}" alt="ImaAAAge" />
+<p class="result_p">It was predicted as {{result}}</p>
+
+<div class="tableDiv">
+  <table>
+    <tr>
+      <th>Joint</th>
+      <th>Confidence Threshold (%)</th>
+    </tr>
+    {% for i,j in cf_dict.items %}
+    <tr>
+      <td>{{ i }}</td>
+      <td>{{ j }}</td>
+    </tr>
+
+    {% endfor %}
+    <br />
+  </table>
+</div>
+{% endblock content%}

@@ -1,0 +1,178 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap');
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    --text-primary: #2bff00f3;
+    --text-secondary: #363636;
+    --bg-primary:#363636;
+    --bg-secondary:#2bff00f3;
+    font-family: 'Poppins', sans-serif;
+    scroll-behavior: smooth;
+}
+
+/* Navbar styling */
+.header{
+    display: flex;
+    flex-direction: row;
+    max-width: 100vw;
+    position: relative;
+    align-items: center;
+    justify-content: space-around;
+    background:var(--bg-primary);
+    max-height: 10vh;
+}
+
+.header .logo{
+    padding: 1rem;
+}
+
+.header .logo a{
+        text-decoration: none;
+        color: white;
+}
+.navbar{
+    display: flex;
+    flex-direction: row;
+    justify-content: right;
+    width: 100%;
+}
+
+.navbar li{
+    list-style: none;
+    padding: 2rem;
+}
+
+.navbar li a{
+    color: white;
+    text-decoration: none;
+    font-size: 1.5rem;
+}
+
+.navbar li a:hover{
+    animation: linkHoverColorChange forwards 500ms;
+}
+
+
+/* Homepage styling */
+
+
+.container{
+    /* background: red; */
+    min-height: 90vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+}
+
+.container .hero {
+    max-width: 50vw;
+    padding: 5rem;
+}
+
+.container .hero .button{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+
+}
+
+.container .hero .button a{
+text-decoration: none;
+border: 2px solid var(--bg-secondary);
+padding: 10px;
+}
+
+.container .hero .button a:hover{
+animation: buttonHover forwards ease-in 250ms;}
+
+.container img{
+    border: 5px solid black;
+}
+
+
+/* Blog page styling */
+.blogDetailContainer {
+    display: flex;
+    flex-direction: column;
+    padding: 5rem;
+}
+.blogContentDetail{
+    background: red;
+}
+.blogMain{
+    min-width: 100vw;
+    text-align: center;
+}
+.blogContainer{
+    margin: auto;
+}
+
+
+.link{
+    text-decoration: none;
+    color: var(--text-secondary);
+}
+
+.link:hover{
+    animation: linkHoverColorChange forwards 500ms;
+
+}
+
+/* Prediction page */
+
+.center{
+    display: block;
+    margin: auto;
+    margin-top: 3rem;
+}
+
+.tableDiv{
+    width: 60%;
+    display: block;
+    margin: auto;
+}
+
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    margin-bottom: 300px;
+
+}
+
+td,
+th {
+    border: 2px solid #dddddd;
+    text-align: center;
+    padding: 8px;
+    font-size: 1.5rem;
+}
+
+tr:nth-child(even) {
+    background-color: #dddddd;
+}
+
+.result_p{
+    text-align: center;
+    width: 100vw;
+}
+
+/* Keyframes */
+@keyframes linkHoverColorChange{
+    to{
+        color:var(--bg-secondary);
+        opacity: 0.9;
+    }
+}
+
+@keyframes buttonHover{
+    to{
+        background-color: var(--bg-primary);
+        color: var(--text-primary);
+    }
+}
+
+
+
+
